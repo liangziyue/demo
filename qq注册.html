@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>注册</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="qq登陆.html">
+    <script src="js/jquery-2.2.2.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+    	 function qq(){
+    	 	// var zh=document.getElementById('name');
+    	 	// var psd=document.getElementById('pass');
+    	 	var zh=$("#name").val(); 
+    	 	var psd=$("#pass").val(); 
+    	 	if(localStorage.getItem(zh)!=null){
+    	 		alert("用户名重名");
+    	 	}else {
+	    		localStorage.setItem(zh, psd);
+	    		var a=2;
+	  			// alert(localStorage.getItem(zh));
+	  		}
+	  			        if(a==2){
+	        	window.location.href="qq登陆.html";
+
+    }
+}
+    </script>
+
+</head>
+
+<body>
+	<div data-role="page" id="home">
+		<img src="image/6.png" alt="" style="margin-top: 170px;margin-left: 145px;">
+		<div data-role="filedcontain" style="m"></div>
+		<input type="text" id="name" name="user" placeholder="账号：">
+		<input type="password" id="pass" name="password" placeholder="密码：">
+		
+		<input type="button" value="注册" style="background-color: #073046;" onclick="qq()";>
+	</div>
+</body><!-- <script type="text/javascript">
+	var txt = document.getElementById('name');
+	var psd = document.getElementById('pass');
+	function qq(){
+		if
+		alert('你的QQ账号为：'+txt.value+' 你的密码为：'+psd.value);
+		return false;
+	}
+</script>  -->
+</html>

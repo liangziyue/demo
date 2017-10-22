@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>登陆</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <script src="js/jquery-2.2.2.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+	// var txt = document.getElementById('name');
+	// var psd = document.getElementById('pass');
+    	 function qq(){
+    	 	// var zh=document.getElementById('name');
+    	 	// var psd=document.getElementById('pass');
+    	 	var zh=$("#name").val(); 
+    	 	var psd=$("#pass").val(); 
+    	 	if(localStorage.getItem(zh)==psd){
+    	 		window.location.href="qq.html";
+    	 	}else {
+	    		alert('wrong!');
+	  		}    
+}
+</script> 
+</head>
+
+<body>
+	<div data-role="page" id="home">
+		<img src="image/6.png" alt="" style="margin-top: 170px;margin-left: 145px;">
+		<div data-role="filedcontain" style="m"></div>
+		<input type="text" id="name" placeholder="账号：">
+		<input type="text" id="pass" placeholder="密码：">
+		<input type="button" value="登陆" style="background-color: #073046;" onclick="qq()";>
+	</div>
+</body>
+</html>
